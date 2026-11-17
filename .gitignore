@@ -1,0 +1,22 @@
+node_modules/
+playwright-report/
+test-results/
+blob-report/
+coverage/
+
+.env
+.env.*
+!.env.example
+
+playwright/.auth/
+.auth/
+auth.json
+storageState.json
+storage-state.json
+
+*.pem
+*.key
+*.log
+
+# Generated performance report
+performance-testing/k6/tests/learner/login_report.json

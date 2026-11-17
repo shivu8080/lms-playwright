@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment files - NEVER COMMIT CREDENTIALS
+.env
+.env.local
+.env.*.local
+
+# Playwright results
+playwright-report/
+test-results/
+blob-report/
+
+# Playwright cache / temporary files
+playwright/.cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# TypeScript build output
+dist/
+build/

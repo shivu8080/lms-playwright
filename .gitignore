@@ -20,3 +20,8 @@ storage-state.json
 
 # Generated performance report
 performance-testing/k6/tests/learner/login_report.json
+
+# Local test data
+/lms-admin/testdata/testdata.json
+/lms-admin/testdata/testdata.xlsx
+/performance-testing/k6/data/students.csv

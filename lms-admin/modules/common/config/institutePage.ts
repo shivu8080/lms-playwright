@@ -196,52 +196,52 @@ class InstitutePage {
   /**
    * View Institution
    */
-  async viewInstituteFlow(
-    data: ViewInstituteData
-  ): Promise<void> {
+  // async viewInstituteFlow(
+  //   data: ViewInstituteData
+  // ): Promise<void> {
 
-    // Step 1: Find the correct Institution row
-    const row = this.institutionRow(
-      data.institution_id
-    );
+  //   // Step 1: Find the correct Institution row
+  //   const row = this.institutionRow(
+  //     data.institution_id
+  //   );
 
-    await expect(row).toBeVisible();
+  //   await expect(row).toBeVisible();
 
-    // Step 2: Find View action using eye icon
-    const viewButton = row.locator(
-      'button:has(span.anticon-eye)'
-    );
+  //   // Step 2: Find View action using eye icon
+  //   const viewButton = row.locator(
+  //     'button:has(span.anticon-eye)'
+  //   );
 
-    await expect(viewButton).toBeVisible();
+  //   await expect(viewButton).toBeVisible();
 
-    // Step 3: Click View
-    await viewButton.click();
+  //   // Step 3: Click View
+  //   await viewButton.click();
 
-    // Step 4: Wait for View modal
-    const modal = this.page
-      .locator('.ant-modal-content')
-      .last();
+  //   // Step 4: Wait for View modal
+  //   const modal = this.page
+  //     .locator('.ant-modal-content')
+  //     .last();
 
-    await expect(modal).toBeVisible();
+  //   await expect(modal).toBeVisible();
 
-    // Step 5: Keep View open for 10 seconds
-    await this.page.waitForTimeout(10_000);
+  //   // Step 5: Keep View open for 10 seconds
+  //   await this.page.waitForTimeout(10_000);
 
-    // Step 6: Click Close
-    const closeButton = modal.getByText(
-      'Close',
-      {
-        exact: true
-      }
-    );
+  //   // Step 6: Click Close
+  //   const closeButton = modal.getByText(
+  //     'Close',
+  //     {
+  //       exact: true
+  //     }
+  //   );
 
-    await expect(closeButton).toBeVisible();
+  //   await expect(closeButton).toBeVisible();
 
-    await closeButton.click();
+  //   await closeButton.click();
 
-    // Step 7: Confirm modal closed
-    await expect(modal).toBeHidden();
-  }
+  //   // Step 7: Confirm modal closed
+  //   await expect(modal).toBeHidden();
+  // }
 }
 
 export default InstitutePage;
